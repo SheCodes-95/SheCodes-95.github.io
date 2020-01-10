@@ -42,7 +42,7 @@
       .contact-form textarea{
         height: 100px;
       }
-    
+
 
     button:hover {
     background-color: #ddd;
@@ -61,9 +61,12 @@
 p{
   text-align: center;
 }
-
-
-       </style>
+</style>
+<script type="text/javascript">
+  var onloadCallback = function() {
+    alert("grecaptcha is ready!");
+  };
+</script>
 </head>
 
 <body>
@@ -78,7 +81,9 @@ p{
   <input type="email" name="email" placeholder="Email*" required>
   <textarea name="message" placeholder="Type your message here..." required></textarea>
 
-
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+      async defer>
+  </script>
 
 
 
@@ -87,6 +92,7 @@ p{
 
 </form>
 </div>
+
 
 
 
