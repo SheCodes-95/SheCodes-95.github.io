@@ -61,12 +61,14 @@
 p{
   text-align: center;
 }
+.g-recaptcha{
+  margin-left: 560px;
+
+}
+
 </style>
-<script type="text/javascript">
-  var onloadCallback = function() {
-    alert("grecaptcha is ready!");
-  };
-</script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
 
 <body>
@@ -81,9 +83,9 @@ p{
   <input type="email" name="email" placeholder="Email*" required>
   <textarea name="message" placeholder="Type your message here..." required></textarea>
 
-  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-      async defer>
-  </script>
+
+
+ <div class="g-recaptcha" data-sitekey="6Lc9J84UAAAAAAB2ZvaUuWaWgEGo4GMTY7_U75Z7"></div>
 
 
 
