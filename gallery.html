@@ -5,11 +5,6 @@
     <title>Tumelo Phela Personal Website| gallery</title>
     <style type="text/css" >
 
-
-    body{
-      font-family: Calibri, sans-serif;
-      }
-
       .navbar1{
         overflow: hidden;
         background-color: #333;
@@ -39,139 +34,272 @@
          margin-bottom:50px;
          letter-spacing:4px;
        }
-
-       * {
+       *{
          box-sizing: border-box;
        }
+       body{
+         font-family: ;
+         margin:0;
+       }
 
-       .container{
+       .mySlides{
+         display: none;
+       }
+       img{
+         vertical-align: middle;
+       }
+       .myFirst-slideshow{
+         max-width: 1000px;
          position: relative;
+         margin: auto;
        }
 
-       .cursor{
-         cursor: pointer;
-       }
-
-       .container-two{
-         text-align: center;
-         background-color: #222;
-         padding: 2px 16px;
+       .previous, .next{
+         cursor:pointer;
+         position: absolute;
+         top:50%;
+         width: auto;
+         padding: 16px;
+         margin-top: -22px;
          color: white;
+         font-weight: bold;
+         font-size: 18px;
+         transition: 0.6s ease;
+         border-radius: 0 3px 3px 0;
+         user-select: none;
        }
 
-       .row:after{
-         content: " ";
-         display: table;
-         clear: both;
+       .next{
+         right:0;
+         border-radius: 3px 0 0 3px;
+
        }
-       .coloumn{
-         float: left;
-         width: 16.66%;
+       .previous:hover, .next:hover{
+         background-color: rgba(0, 0, 0, 0.8);
+
+       }
+       .caption{
+         color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+       }
+
+       .navii{
+         cursor: pointer;
+         height: 15px;
+         width: 15px;
+         margin: 0 2px;
+         background-color: #bbb;
+         border-radius: 50%;
+         display:inline-block;
+         transition: background-color 0.6s;
+
+       }
+
+
+       .active, .navii:hover{
+         background-color: #717171;
+         }
+         .fade{
+           -webkit-animation-name: fade;
+           -webkit-animation-duration: 1.5s;
+           animation-name: fade;
+           animation-duration:  1.5s;
+         }
+         @-webkit-keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+          }
+
+          @keyframes fade {
+            from {opacity: .4}
+             to {opacity: 1}
+           }
+
+           @media only screen and (max-width: 300px) {
+        .previous, .next, .caption
+        {font-size: 11px
+        }
+      }
+
+      .overlay{
+        position:absolute;
+        bottom:0;
+        left:0;
+        right:0;
+        background-color: black;
+        overflow: hidden;
+        width: 100%;
+        height:0;
+        transition: .5s ease;
 
       }
-      .photo{
-        opacity: 0.6;
-        margin-left:27%;
+      .mySlides, .overlay{
+        height:25%;
+
       }
 
-      .active, .photo:hover{
-        opacity: 1;
-      }
+      </style>
+       <!---END OF STYLE/CSS -->
 
-       </style>
 </head>
-
 
 
 <body>
 
 <h1>GALLERY</h1>
 
-<div class="container">
+ <div class="myFirst-slideshow">
+     <div class="mySlides fade">
+     <img src="IMG_20190122_135924.jpg" style="width:100%">
+     <div class="overlay">
+     <div class="caption">The Twelve Apostles view from Lion's head, Cape Town.</div>
+   </div>
+ </div>
 
-<div class="container-two">
-  <p id="caption">
+   <div class="mySlides fade">
+   <img src="IMG-20190427-WA0152.jpg" style="width:100%">
+   <div class="overlay">
+    <div class="caption">African cuisine, Big Mommas Observatory.</div>
+    </div>
+ </div>
+
+ <div class="mySlides fade">
+ <img src="IMG-20190810-WA0029.jpg" style="width:100%">
+ <div class="overlay">
+   <div class="caption">Starbucks, Melrose Arch.</div>
+   </div>
+</div>
+
+<div class="mySlides fade">
+<img src="IMG-20191127-WA0017.jpg" style="width:100%">
+ <div class="overlay">
+ <div class="caption">On The Ball College graduation ceremony, Nelson Mandela Boulevard.</div>
+ </div>
+</div>
+
+<div class="mySlides fade">
+<img src="IMG-20191203-WA0004.jpg" style="width:100%">
+<div class="overlay">
+ <div class="caption">Younglings induction, The Habour.</div>
+ </div>
+</div>
+
+<div class="mySlides fade">
+<img src="IMG-20190812-WA0023fourways.jpg" style="width:100%">
+<div class="overlay">
+ <div class="caption">Juice bar, Fourways Farmers Market.</div>
+ </div>
+</div>
+
+<div class="mySlides fade">
+<img src="IMG-20191214-WA0017.jpg" style="width:100%">
+<div class="overlay">
+ <div class="caption">The secret santa gift exchange, Greenpoint Park.</div>
+ </div>
+</div>
+
+<div class="mySlides fade">
+<img src="Snapchat-178923831.jpg" style="width:100%">
+<div class="overlay">
+  <div class="caption">Fro, Mamelodi.</div>
   </div>
-
-  <div class="row">
-    <div class="column">
-  <img class="photo" src="IMG_20190122_135924.jpg" style="width:50%"  alt="The twelve apostles view from Lion's head, Cape Town.">
 </div>
 
-<div class="row">
-  <div class="column">
-<img class="photo" src="IMG-20190427-WA0152.jpg" style="width:50%"  alt="African cuisine from Big Mommas, Lower Main Observatory.">
+<div class="mySlides fade">
+<img src="Snapchat-1053632220.jpg" style="width:100%">
+<div class="overlay">
+   <div class="caption">The hike, Lion's Head.</div>
+   </div>
 </div>
 
-<div class="row">
-  <div class="column">
-<img class="photo" src="IMG-20190810-WA0029.jpg" style="width:50%" alt="Starbucks, Melrose Arch.">
+<div class="mySlides fade">
+<img src="Snapchat-1455869085.jpg" style="width:100%">
+<div class="overlay">
+<div class="caption">Table mountain views from Lion's Head, Cape Town.</div>
+</div>
 </div>
 
-<div class="row">
-  <div class="column">
-<img class="photo" src="IMG-20191127-WA0017.jpg" style="width:50%"  alt="On The Ball College graduation ceremony, Nelson Mandela Boulevard.">
+<div class="mySlides fade">
+<img src="IMG-20190809-WA0030ortambo.jpg" style="width:100%">
+<div class="overlay">
+ <div class="caption">O.R Tambo International Airport, Johannesburg.</div>
+</div>
 </div>
 
-<div class="row">
-  <div class="column">
-<img class="photo" src="IMG-20191203-WA0004.jpg" style="width:50%"  alt="Younglings induction, Lower Long Street.">
+<div class="mySlides fade">
+<img src="IMG-20190812-WA0013fourways3.jpg" style="width:100%">
+<div class="overlay">
+ <div class="caption">Woodstock waffles stall, Fourways Farmers Market.</div>
+ </div>
 </div>
 
-<div class="row">
-  <div class="column">
-<img class="photo" src="IMG-20191214-WA0017.jpg" style="width:50%"  alt="Younglings secret santa end of year function, Greenpoint Park.">
+<div class="mySlides fade">
+<img src="IMG_20200107_135656workstation.jpg" style="width:100%">
+<div class="overlay">
+<div class="caption">My workstation, Younglings Africa.</div>
+</div>
 </div>
 
-<div class="row">
-  <div class="column">
-<img class="photo" src="Snapchat-178923831.jpg" style="width:50%"  alt="Random, Mamelodi.">
+<div class="mySlides fade">
+<img src="IMG-20190812-WA0016fourways2.jpg"  style="width:100%">
+<div class="overlay">
+ <div class="caption">Biltong stall, Fourways Farmers Market.</div>
+</div>
 </div>
 
-<div class="row">
-  <div class="column">
-<img class="photo" src="Snapchat-1053632220.jpg" style="width:50%" alt="Hiking up Lion's Head, Cape Town.">
-</div>
-
-<div class="row">
-  <div class="column">
-<img class="photo" src="Snapchat-1455869085.jpg" style="width:50%" alt="Table mountain view from Lion's Head, Cape Town.">
-</div>
-
-<div class="row">
-  <div class="column">
-<img class="photo" src="IMG-20190809-WA0030ortambo.jpg" style="width:50%" alt="OR Tambo, Johannesburg.">
-</div>
-
-<div class="row">
-  <div class="column">
-<img class="photo" src="IMG-20190812-WA0013fourways3.jpg" style="width:50%"  alt="Woodstock waffles pop up, Fourways Farmers Market.">
-</div>
-
-<div class="row">
-  <div class="column">
-<img class="photophoto" src="IMG_20200107_135656workstation.jpg" style="width:50%"  alt="Work-Station, Younglings Lower Long Street.">
-</div>
-
-<div class="row">
-  <div class="column">
-<img class="photo" src="IMG-20190812-WA0016fourways2.jpg" style="width:50%" alt="Biltong pop up, Fourways Farmers Market.">
-</div>
-
-<div class="row">
-  <div class="column">
-<img class="photo" src="IMG-20190427-WA0098bigmommas.jpg" style="width:50%"  alt="Big Mommas, Lower Main Observatory.">
-</div>
-
-<div class="row">
-  <div class="column">
-<img class="photo" src="IMG-20190812-WA0023fourways.jpg" style="width:50%"  alt="Juice Bar, Fourways Farmers Market.">
-</div>
+<div class="mySlides fade">
+<img src="IMG-20190427-WA0098bigmommas.jpg" style="width:100%">
+<div class="overlay">
+ <div class="caption">Big Mommas, Observatory.</div>
 </div>
 </div>
 
 
+ <!--SLIDE NAV -->
+<a class="previous" onclick="plusSlides(-1)"> &#10084; </a>
+<a class="next" onclick="plusSlides(1)">&#10095; </a>
+</div>
 
+
+
+<!-- JAVASCRIPT--->
+  <script>
+
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("navii");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    navii[slideIndex-1].className += " active";
+  }
+
+</script>
 <!----NAVI BAR --->
   <div class="navbar1" >
     <a href="contact.html">CONTACT</a>
