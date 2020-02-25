@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tumelo Phela Personal Website |contact</title>
     <style type="text/css" >
 
@@ -32,6 +33,7 @@
          margin:0;
          padding:0;
          font-family: Calibri, sans-serif;
+         background-color: #d4d2cd;
        }
        .contact-form input, textarea{
          display:block;
@@ -48,6 +50,22 @@
     background-color: #ddd;
     cursor: pointer;
    }
+   .git, .lnk, .resume{
+     padding: 14px;
+     margin: 5px;
+     border-radius: 8px;
+     background-color: #333;
+     color: white;
+   }
+   #snd{
+     background-color: #333;
+     color: white;
+     border-radius: 8px;
+     padding-right: 15px;
+     width: 15%;
+     
+   }
+   
 
 
   h1{
@@ -63,7 +81,7 @@ p{
 }
 .g-recaptcha{
   margin-left: 560px;
-  
+
 
 }
 
@@ -80,21 +98,14 @@ p{
    <h1>GET IN TOUCH...</h1>
  <p>If you have any questions regarding the content of the website, please don't hesistate to contact me.</p>
  <p>Kindly fill in the form below and I will get back to you as soon as I can :) </p>
-<form method="post" action="contact-handler.php">
-  <input type="text" name="name" placeholder="Name*" required>
-  <input type="text" name="surname" placeholder="Surname*" required>
-  <input type="email" name="email" placeholder="Email*" required>
-  <textarea name="message" placeholder="Type your message here..." required></textarea>
 
-
-
- <div class="g-recaptcha" data-sitekey="6Lfoys4UAAAAAO4bqlGCNZnhIlswdGWb55JkIK4s"></div>
-
-
-
-  <input type="submit" name="submit" value="SUBMIT" class="submit-btn">
-
-
+ <form action="https://formspree.io/tumelophela@gmail.com" method="POST">
+  
+  <input type="text" name="name" placeholder="Name" required>
+  <input type="text" name="surname" placeholder="Surname" required>
+  <input type="email" name="_replyto" placeholder="Email" required>
+  <textarea type="message" name="message" placeholder="Type your message here..." required></textarea>
+  <input id="snd" type="submit" value="SEND">
 </form>
 </div>
 
@@ -103,9 +114,14 @@ p{
   You can also check my following profile accounts for more Information and projects I have worked on previously: <br>
   <br>
   <br>
-  LinkedIn: <a href="https://www.linkedin.com/in/tumelo-phela-63a495127">Go to LinkedIn profile</a><br>
-  Github: <a href="https://github.com/SheCodes-95">Go to Github profile</a>
-  </p>
+  <!--- LINKS TO MY SOCIALS/PROFILE-->
+  <button class="git" onclick="window.open('https://github.com/SheCodes-95')" >SEE GITHUB</button>
+  <button class="lnk" onclick="window.open('https://www.linkedin.com/in/tumelo-phela')">SEE LINKEDIN</button>
+  <button class="resume" onclick="window.open('https://drive.google.com/drive/u/0/folders/1yMgKWAg60bDUmnDVFHlmm1j0TnvxTWKK')" target="_blank">SEE RESUME</button>
+  
+  
+  
+  </p>      
 </div>
 
 
@@ -113,7 +129,7 @@ p{
   <div class="navbar1" >
     <a href="contact.html">CONTACT</a>
     <a href="skills.html">SKILLS</a>
-    <a href="gallery.html">GALLERY</a>
+
     <a href="about.html">ABOUT</a>
     <a href="index.html">HOME</a>
   </div>

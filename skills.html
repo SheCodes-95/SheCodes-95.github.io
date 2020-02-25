@@ -5,12 +5,10 @@
     <title>Tumelo Phela Personal Website| skills</title>
     <style type="text/css" >
 
-   *{
-     box-sizing: border-box;
-   }
 
     body{
       font-family: Calibri, sans-serif;
+      background-color: #d4d2cd;
       }
 
       .navbar1{
@@ -35,6 +33,7 @@
        .navbar1 a:hover{
          background: #ddd;
          color:black;
+
        }
        h1{
          text-align: center;
@@ -44,163 +43,124 @@
          letter-spacing:4px;
        }
 
-       .container{
-         width: 30%;
-         background-color: #ddd;
-
-       }
-
-       .skills{
-         text-align: right;
-         padding-top: 10px;
-         padding-bottom: 10px;
-         color: white;
-       }
-       .html{
-         width: 60%;
-         background-color: #333;
-       }
-       .css{
-         width: 55%;
-         background-color: #333;
-       }
-       .java{
-         width: 50%;
-         background-color: #333;
-       }
-       .pl{
-         width: 30%;
-         background-color: #333;
-       }
-       .sql{
-         width: 80%;
-         background-color: #333;
-       }
-       .uml{
-         width: 80%;
-         background-color: #333;
-       }
-       .php{
-         width: 10%;
-         background-color: #333;
-       }
-       .microsoft{
-         width: 95%;
-         background-color: #333;
-       }
-       .good{
-         width: 65%;
-         background-color: #333;
-       }
-       .ability{
-         width: 75%;
-         background-color: #333;
-       }
-       .player{
-         width: 65%;
-         background-color: #333;
-       }
-       .com{
-         width: 65%;
-         background-color: #333;
-       }
-       .deadline{
-         width: 85%;
-         background-color: #333;
-       }
-       p{
+      #intro{
          text-align: center;
        }
 
-       </style>
+       .skill{
+         background: #333;
+         color: white;
+         cursor: pointer;
+         padding: 18px;
+         width: 100%;
+         border: none;
+         text-align: left;
+         outline: none;
+         font-size: 15px;
+       }
+       .active, .skill:hover{
+         background-color: #555;
+       }
+       .skill:after{
+         content: '\002B';
+         color: white;
+         font-weight: bold;
+         float: right;
+         margin-left: 5px;
+         }
+
+         .active after{
+           content: "\2212";
+         }
+
+         .content{
+           padding: 0 19px;
+           max-height: 0;
+           overflow: hidden;
+           transition: max-height 0.2s ease-out;
+           background-color: #f1f1f1;
+
+         }
+
+ </style>
 </head>
 
 <body>
 <h1>SKILLS</h1>
-<p>This is my current skillset and I am looking forward to grabbing learning opportunities at Younglings...
-<br>
-Take a look at the following:</p>
+<p id="intro">The collapsable 
+</p>
 
+<button class="skill">Technical Skills</button>
+<div class="content">
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>Java</li>
+ <li>JavaScript</li>
+<li>SQL</li>
+<li>PL/SQL</li>
+<li>Microsoft office suite</li>
+<li>UML</li>
+</ul>
 
-<h3>HTML</h3>
-<div class="container">
-  <div class="skills html"></div>
-</div>
-
-<h3>CSS</h3>
-<div class="container">
-  <div class="skills css"></div>
-</div>
-
-
-<h3>Java</h3>
-<div class="container">
-  <div class="skills java"></div>
 </div>
 
 
-<h3>PL/SQL </h3>
-<div class="container">
-  <div class="skills pl"></div>
+
+<button class="skill">Soft Skills</button>
+<div class="content">
+  <ul>
+  <li>Ability to handle multiple tasks simulteneously</li>
+  <li>Excellent team player</li>
+  <li>Good interpersonal skills</li>
+   <li>Good verbal/written communications skills</li>
+  <li>Detail oriented</li>
+   <li>Self-motivated</li>
+  </ul>
+
+</div>
+
+<button class="skill">Technologies/Software</button>
+ <div class="content">
+   <ul>
+   <li>Adobe Premier Pro</li>
+   <li>Adobe Photoshop</li>
+   <li>Atom IDE</li>
+   <li>Balsamiq</li>
+   <li>IntelliJ IDE</li>
+   <li>Github</li>
+   <li>Netbeans IDE</li>
+   </ul>
 </div>
 
 
-<h3>SQL/MySQL</h3>
-<div class="container">
-  <div class="skills sql"></div>
-</div>
+<!----- JAVASCRIPT---->
+<script>
 
-<h3>UML</h3>
-<div class="container">
-  <div class="skills uml"></div>
-</div>
+  var coll= document.getElementsByClassName("skill");
+  var i;
 
-<h3>PHP- still in the process of learning it </h3>
-<div class="container">
-  <div class="skills php"></div>
-</div>
+  for(i= 0; i < coll.length; i++){
+    coll[i].addEventListener("click", function(){
+      this.classList.toggle("active");
+      var content= this.nextElementSibling;
+      if(content.style.maxHeight){
+        content.style.maxHeight= null;
 
-
-<h3>Microsoft office suite</h3>
-<div class="container">
-  <div class="skills microsoft"></div>
-</div>
-
-<h3>Good interpersonal skills</h3>
-<div class="container">
-  <div class="skills good"></div>
-</div>
+      } else{
+        content.style.maxHeight= content.scrollHeight + "px";
+      }
+    });
+  }
 
 
-<h3>Ability to handle multiple tasks simulteneously</h3>
-<div class="container">
-  <div class="skills ability"></div>
-</div>
-
-
-<h3>Excellent team player</h3>
-<div class="container">
-  <div class="skills player"></div>
-</div>
-
-
-<h3>Good communication skills</h3>
-<div class="container">
-  <div class="skills com"></div>
-</div>
-
-
-<h3>Deadline oriented</h3>
-<div class="container">
-  <div class="skills deadline"></div>
-</div>
-
+</script>
 
 
   <div class="navbar1" >
     <a href="contact.html">CONTACT</a>
     <a href="skills.html">SKILLS</a>
-    <a href="gallery.html">GALLERY</a>
+
     <a href="about.html">ABOUT</a>
     <a href="index.html">HOME</a>
   </div>
