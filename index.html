@@ -9,6 +9,28 @@
      body{
          font-family: Calibri, sans-serif;
          }
+         .navbar1{
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      .navbar1 a{
+        float: right;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17 px;
+        font-family: Calibri, sans-serif;
+        }
+
+       .navbar1 a:hover{
+         background: #ddd;
+         color:black;
+       }
 
          .sidebar {
            height: 100%;
@@ -133,36 +155,18 @@
    </div>
 
 
-<!---MENU BAR  --->
-<div id="mySidebar" class="sidebar" >
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
-
-   <a href="index.html">HOME<a/>
-   <a href="about.html">ABOUT<a/>
-  <a href="skills.html">SKILLS<a/>
-  <a href="contact.html">CONTACT<a/>
-  </div>
-
-  <div id="main">
-    <button class="openbtn" onclick="openNav()">☰ </button>
-  </div>
-
- <script>
-    function openNav() {
-          document.getElementById("mySidebar").style.width = "250px";
-          document.getElementById("main").style.marginLeft = "250px";
-        }
-
-   function closeNav() {
-         document.getElementById("mySidebar").style.width = "0";
-         document.getElementById("main").style.marginLeft= "0";
-       }
-
- </script>
 
 
 
 
+
+<div class="navbar1" >
+  <a href="contact.html">CONTACT</a>
+  <a href="skills.html">SKILLS</a>
+
+  <a href="about.html">ABOUT</a>
+  <a href="index.html">HOME</a>
+</div>
 
   </body>
 </html>>
