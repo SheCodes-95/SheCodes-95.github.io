@@ -1,7 +1,9 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
     <title>Tumelo Phela | Portfolio</title>
  <!---HOME PAGE STYLING -->
    <style>
@@ -32,64 +34,7 @@
          color:black;
        }
 
-         .sidebar {
-           height: 100%;
-           width: 0;
-           position: fixed;
-           z-index: 1;
-           top: 0;
-           left: 0;
-           background-color: #111;
-           overflow-x: hidden;
-           transition: 0.5s;
-           padding-top: 60px;
-         }
-
-         .sidebar a {
-           padding: 8px 8px 8px 32px;
-           text-decoration: none;
-           font-size: 25px;
-           color: #818181;
-           display: block;
-           transition: 0.3s;
-         }
-
-         .sidebar a:hover {
-           color: #f1f1f1;
-         }
-
-         .sidebar .closebtn {
-           position: absolute;
-           top: 0;
-           right: 25px;
-           font-size: 36px;
-           margin-left: 50px;
-         }
-
-         .openbtn {
-           font-size: 20px;
-           cursor: pointer;
-           background-color: #111;
-           color: white;
-           padding: 10px 15px;
-           border: none;
-         }
-
-         .openbtn:hover {
-           background-color: #444;
-         }
-
-         #main {
-           transition: margin-left .5s;
-           padding: 16px;
-         }
-
-         /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-         @media screen and (max-height: 450px) {
-           .sidebar {padding-top: 15px;}
-           .sidebar a {font-size: 18px;}
-         }
-
+        
       .background-wrap{
         position: fixed;
         z-index: -1000;
@@ -131,6 +76,16 @@
         letter-spacing: 3px;
         color:#fff;
       }
+      /* Tablet Landscape */
+      @media screen and (max-width: 10px) {
+      .content { width:67%; }
+      .navbar1 { width:30%; margin-left:3%;}  
+      }
+      /* Tabled Portrait */
+      @media screen and (max-width: 768px) {
+      .content { width:100%; }
+      .navbar1 { width:100%; margin:0; border:none; }
+}
 
 
      </style>  <!-- END OF STYLING -->
@@ -145,7 +100,7 @@
      <video id="video-bg-elem" preload="auto" autoplay="true" loop="loop" muted="muted" >
        <source src="YouCut_20191227_224628673.mp4" type="video/mp4">
          Video not supported
-       </<video>
+       </video>
     </div>
 
     <!---CONTENT FOR HOME SCREEN   --->
