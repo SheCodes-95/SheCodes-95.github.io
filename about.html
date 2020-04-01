@@ -5,74 +5,122 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
     <title>Tumelo Phela | Portfolio - About Me</title>
-    <style type="text/css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
-    body{
+    <style>
+      body{
+      margin:0;
       font-family: Calibri, sans-serif;
-      background-color: #d4d2cd;
+      
       }
 
-      .navbar1{
-        overflow: hidden;
-        background-color: #333;
-        position: fixed;
-        top: 0;
-        width: 100%;
-      }
-      .navbar1 a{
+     .navbar1{
+    overflow: hidden;
+    background-color:#333;
+}
+.navbar1 a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar1 a:hover{
+  background-color: #333;
+    color: olive;
+    
+}
+
+.navbar1 .icon{
+    display: none;
+}
+
+@media screen and (max-width: 600px){
+    .navbar1 a:not(:first-child){display: none;}
+    .navbar1 a.icon{
         float: right;
         display: block;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17 px;
-        font-family: Calibri, sans-serif;
-        }
-
-       .navbar1 a:hover{
-         background: #ddd;
-         color:black;
-       }
-      .timeline{
-        padding-left:45%;
-        padding-top:-280%;
-      }
-      h3{
-        padding-left:45%;
-        padding-top:-280%;
-        letter-spacing:4px;
-      }
-      h1{
-        text-align: center;
-        margin:0 auto;
-        padding-top:50px;
-        margin-bottom:50px;
-        letter-spacing:4px;
-        font-family: Calibri, sans-serif;
-      }
-  *{
-    box-sizing: border-box;
-  }
-  .timeline{
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-p{
-
-  text-align: center;
+    }
 }
 
+@media screen and (max-width: 600px){
+    .navbar1.responsive{position: relative;}
+    .navbar1.responsive .icon{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .navbar1.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
 
-@media only screen and (max-width:620px) {
-  /* For mobile phones: */
-  .navibar1 {
-    width:100%;
-  }
-}
+} 
+
+      .wrapper{
+        display: grid;
+        grid-template-areas: "matric matric first-year first-year"
+                              "second-year second-year third-year third-year"
+                              "forth-year forth-year forth-year forth-year";
+        max-width: 1300px;
+        margin: 250px auto 50px auto;
+      }
+      .matric{
+        background-color: #333029;
+        color: white;
+        grid-area: matric;
+      }
+      .matric h1, h2, h3, p{
+        text-align: center;
+      }
+
+      .first-year{
+        background-color: white;
+        color: #333029;
+        grid-area: first-year;
+      }
+      
+      .first-year h1, h2, h3, p{
+        text-align: center;
+      }
+
+      .second-year{
+        background-color: white;
+        color: #333029;
+        grid-area: second-year;
+        margin-bottom: 20px;
+      }
+
+      .second-year h1, h2, h3, p{
+        text-align: center;
+      }
+
+      .third-year{
+        background-color: #333029;
+        color: white;
+        grid-area: third-year;
+        margin-bottom: 20px;
+      }
+
+      .third-year h1, h2, h3, p{
+        text-align: center;
+      }
+
+      .forth-year{
+        background-color: #333029;
+        color: white;
+        grid-area: forth-year;
+      }
+
+      .forth-year h1, h2, h3, p{
+        text-align: center;
+      }
+     
+
 
        </style>
 
@@ -83,114 +131,178 @@ p{
 
 <body>
 
-  <button id="myBtn">2010</button>
-  <div id="myModal">
 
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <p>participated in a job shadowing programme</p>
-
-       </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-<h1>ABOUT ME..</h1>
-
-  <p>My name is Tumelo Phela. I am a 25-year-old and an aspiring web development guru. <br >My journey in Cape Town started when I enrolled at Cape Pensinsula University of Technology in 2015. Kindly see my timeline of events below for more details :)
-    <br>
-
-  </p>
-
-
-<h3>MY TIMELINE OF EVENTS...</h3>
-
-
-<div class="timeline">
-  <div class="container-left">
-    <div class="content">
-      <h2>2013</h2>
-<p>Matriculated at Mamelodi Secondary School</p>
-</div>
-</div>
-
-<div class="container-right">
-  <div class="content">
-    <h2>2014</h2>
-<p>Gap year</p>
-</div>
-</div>
-
-<div class="container-left">
-  <div class="content">
-    <h2>2015</h2>
-<p>Enrolled for a higher certificate in Information Communication and Technology at CPUT</p>
-<ul>
-  <li>Did introductory courses for the following programming languages: HTML, CSS, JavaScript</li>
-  <li>I also did the following modules: Business practice, computer hardware/networks, professional/strategic communications, quantitative techniques, imformation technology services</li>
-  </ul>
-</div>
-</div>
-
-<div class="container-right">
-  <div class="content">
-    <h2>2016</h2>
-<p>Enrolled for a diploma in Information Communications and Technology: Applications Development at CPUT</p>
-<ul>
-<li>The course focused primarily on Java as a programming language but I was also introduced to both multimedia and communications networks fundamentals.</li>
-<li>Multimedia: Worked on Photoshop, premier pro, personal branding</li>
-<li>Communications networks: We did a cyber-security introduction course on Cisco</li>
-<li>I also did SQL as a fundamenntal</li>
-<li>In 3rd year, I took software architecture as an Elective. Focused on Unified Modeling Language(UML) and documentation</li>
-
-</ul>
-</div>
-</div>
-
-<div class="container-left">
-  <div class="content">
-    <h2>2019</h2>
-
-<p>Enrolled for a learnership in July at On The Ball College where I obtained a national certificate in Systems Development </p>
-<ul>
-<li>The main focus was Java but we also did introductory courses on Oracle Academy which were PL/SQL and SQL.</li>
-  </ul>
-  <p>Started an internship at Younglings in December.
-    <ul>
-    <li>I am currently a Software Developer intern</li>
-  </ul>
-</div>
-</div>
-
-<div class="container-right">
-  <div class="content">
-    <h2>2020</h2>
-  <p>Getting my Diploma in ICT: Applications Development in April.</p>
-</div>
-</div>
-
-
-
-</div>
-
-
-
-  <div class="navbar1" >
-    <a href="contact.html">CONTACT</a>
-    <a href="skills.html">SKILLS</a>
-
-    <a href="about.html">ABOUT</a>
+  <div class="navbar1" id="myTopNav">
     <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="skills.html">SKILLS</a>
+    <a href="contact.html">CONTACT</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+      </a>
   </div>
 
+
+  <div class="wrapper">
+    <div class="matric" >
+      <h1>2013</h1>
+      <h2>National Senior Certificate</h2>
+      <h3>Mamelodi Secondary School</h3>
+      <p>>Matriculated</p>
+
+    </div>
+
+    <div class="first-year">
+      <h1>2015</h1>
+      <h2>Higher Certificate in ICT</h2>
+      <h3>Cape Peninsula University of Technology</h3>
+      <p>Enrolled for a higher certificate in Information Communication and Technology at CPUT
+        <br> Did introductory courses for the following programming languages:HTML, CSS, JavaScript
+         I also did the following modules: Business practice,
+         computer hardware/networks, professional/strategic communications,  quantitative techniques, imformation technology services
+        </p>
+     </div>
+
+     <div class="second-year">
+       <h1>2016</h1>
+       <h2>Diploma in Information and Communication Technology: Applications Development</h2>
+       <h3>Cape Peninsula University of Technology</h3>
+       <p>The course focused primarily on Java as a programming language but I was also introduced to both
+        multimedia and communications networks fundamentals.
+        Multimedia: Worked on Photoshop, premier pro, personal branding
+Communications networks: We did a cyber-security introduction course on Cisco
+I also did SQL as a fundamenntal
+In 3rd year,I took software architecture as an Elective. Focused on Unified Modeling Language(UML) and documentation
+</p>
+ </div>
+
+ <div class="third-year">
+   <h1>2019</h1>
+   <h2>National Certificate: Systems Development</h2>
+   <h3>On The Ball College</h3>
+   <p>The main focus was Java but we also did introductory courses on Oracle Academy 
+     which were PL/SQL and SQL.</p>
+    <br>
+    <h2>Skills Development Program at Younglings Africa</h2>
+    <p>Focusing primarily on Web Development:
+      <br>
+      Developing Websites/Webpages <br>
+      Upskilling newest technologies
+
+    </p>
+  </div>
+   
+  <div class="forth-year">
+   <h1>2020</h1>
+   <h2>Diploma in Information and Communication Technology: Applications Development to be conferred in April</h2>
+   <h3>Cape Peninsula University of Technology</h3>
+     <p>Graduation Ceremony date is yet to be confired</p>
+  </div>
+
+
+
+  </div>
+
+  <!------- 
+  
+<div class="wrapper">
+  <div class="box-area">
+    <div class="custom">
+      <div class="box-date">
+        <span>2013</span>
+      </div>
+        <div class="box-text">
+          <h2>Mamelodi Secondary School</h2>
+          <h3>National Senior Certificate</h3>
+          <p>Matriculated</p>
+        </div>
+    </div>
+  </div>
+
+  <div class="box-area box-right">
+    <div class="custom">
+      <div class="box-date">
+        <span>2015</span>
+      </div>
+        <div class="box-text">
+          <h2>Cape Peninsula University of Technology</h2>
+          <h3>Higher Certificate</h3>
+          <p>Enrolled for a higher certificate in Information Communication and Technology at CPUT
+           <br> Did introductory courses for the following programming languages:HTML, CSS, JavaScript
+            I also did the following modules: Business practice,
+            computer hardware/networks, professional/strategic communications,  quantitative techniques, imformation technology services</p>
+        </div>
+    </div>
+  </div>
+
+  <div class="box-area">
+    <div class="custom">
+      <div class="box-date">
+        <span>2016</span>
+      </div>
+        <div class="box-text">
+          <h2>Cape Peninsula University of Technology</h2>
+          <h3>Diploma in Information and Communication Technology: Applications Development</h3>
+          <p>The course focused primarily on Java as a programming language but I was also introduced to both
+            multimedia and communications networks fundamentals.
+            Multimedia: Worked on Photoshop, premier pro, personal branding
+Communications networks: We did a cyber-security introduction course on Cisco
+I also did SQL as a fundamenntal
+In 3rd year,I took software architecture as an Elective. Focused on Unified Modeling Language(UML) and documentation
+
+
+          </p>
+        </div>
+    </div>
+  </div>
+
+  <div class="box-area  box-right">
+    <div class="custom">
+      <div class="box-date">
+        <span>2019</span>
+      </div>
+        <div class="box-text">
+          <h2>On The Ball College</h2>
+          <h3>National Certificate: Systems Development</h3>
+          <p>The main focus was Java but we also did introductory courses on Oracle Academy which were PL/SQL and SQL.
+          </p>
+          <p>Started an internship at Younglings Africa in December.
+          </p>
+        </div>
+    </div>
+  </div>
+
+  <div class="box-area  box-right">
+    <div class="custom">
+      <div class="box-date">
+        <span>2020</span>
+      </div>
+        <div class="box-text">
+          <h2>Cape Peninsula University of Technology
+          <h3>Diploma in Information and Communications Technology to be conferred in April</h3>
+          <p>Graduation ceremony date to be confirmed</p>
+        </div>
+    </div>
+  </div>
+
+</div>
+
+---->
+
+
+
+
+
+<script>
+  function myFunction(){
+      var x = document.getElementById("myTopNav");
+      if(x.className==="navbar1"){
+          x.className+=" responsive";
+      }
+      else{
+          x.className= "navbar1";
+      }
+  }
+</script>
 </body>
-</html>>
+</html>
